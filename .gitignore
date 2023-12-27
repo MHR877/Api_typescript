@@ -1,0 +1,57 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build artifacts and logs
+build/
+dist/
+logs/
+
+# Ignore environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore compiled files
+*.log
+*.bak
+*.lock
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore package-lock files
+package-lock.json
+
+# Ignore yarn.lock file
+yarn.lock
+
+# Ignore Jest coverage directory
+coverage/
+
+# Ignore generated files by popular static site generators
+public/
+
+# Ignore logs and generated files in Rails
+log/
+tmp/
+*.log
+*.pid
+*.lock
+
+# Ignore local configuration files
+config/local.yml
