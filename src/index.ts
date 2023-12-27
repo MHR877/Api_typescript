@@ -9,8 +9,10 @@ import http from "http";
 import dotenv from 'dotenv';
 dotenv.config();
 
-const app = express();
+import authenticationRouter from "./router/authentication.router";
 
+
+const app = express();
 app.use(cors({
     credentials: true
 }))
@@ -38,6 +40,8 @@ if (MongoDB_PASSWORD && MongoDB_URL) {
   console.error('DATABASE_PASSWORD or DATABASE_URL is not defined.');
 }
 
+app.use("/api/v1/" , authenticationRouter)
+
 server.listen(3000 , () => {
-    console.log("http://localhost:8888"); 
-}) 
+    console.log("http://localhost:3000"); 
+})
