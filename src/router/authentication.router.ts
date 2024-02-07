@@ -1,15 +1,22 @@
 import {
-  getAllUsers,
+  forgotPassword,
   login,
+  logout,
   register,
+  resetPassword,
+  updatePassword,
 } from "../controllers/authentication.controller";
 import express from "express";
 
 const authenticationRouter = express.Router();
 
 authenticationRouter
-  .get("/auth", getAllUsers)
-  .post("/auth/register", register)
-  .post("/auth/login", login);
+  .post("/register", register)
+  .post("/login", login)
+  .get("/logout", logout);
+
+authenticationRouter.post("/forgotpassword", forgotPassword);
+authenticationRouter.patch("/resetpassword/:token", resetPassword);
+authenticationRouter.patch("/updatemypassword", updatePassword);
 
 export default authenticationRouter;
